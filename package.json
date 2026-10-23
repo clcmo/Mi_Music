@@ -16,7 +16,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "opusscript": "^0.0.8",
     "prism-media": "^1.3.5",
-    "ytdl-core": "^4.11.2"
+    "ytdl-core": "^4.11.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
