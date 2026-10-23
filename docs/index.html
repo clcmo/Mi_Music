@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MiMusic · bot de música para Discord</title>
+    <meta
+      name="description"
+      content="MiMusic toca música nos canais de voz do seu servidor Discord: busca por nome ou link, playlists, fila completa e controle por comandos de barra."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎶%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="brand" href="#">MiMusic</a>
+        <nav aria-label="Principal">
+          <a href="#recursos">Recursos</a>
+          <a href="#comandos">Comandos</a>
+          <a href="#hospedar">Hospedar</a>
+          <a href="https://github.com/clcmo/Mi_Music">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap hero">
+        <div>
+          <h1>Música no seu servidor, a um /play de distância.</h1>
+          <p class="lead">
+            MiMusic é um bot de transmissão musical para Discord. Entre num
+            canal de voz, digite o nome de uma música ou cole um link, e ele
+            cuida da fila, do volume e do resto.
+          </p>
+          <div class="cta">
+            <a id="invite" class="btn primary" href="#hospedar"
+              >Hospedar o seu MiMusic</a
+            >
+            <a class="btn ghost" href="#comandos">Ver comandos</a>
+          </div>
+        </div>
+
+        <div
+          class="chat"
+          role="img"
+          aria-label="Exemplo de conversa: um usuário usa o comando /play e o MiMusic começa a tocar a música"
+        >
+          <div class="msg">
+            <div class="avatar u">V</div>
+            <div>
+              <b>você</b><small>agora</small>
+              <p><span class="slash">/play</span> lofi hip hop radio</p>
+            </div>
+          </div>
+          <div class="msg">
+            <div class="avatar b">Mi</div>
+            <div>
+              <b>MiMusic</b><small>agora</small>
+              <p>⏱ | Loading your track...</p>
+              <p>
+                ▶ | Started playing: <b>lofi hip hop radio</b> in
+                <b>Sala de estudos</b>!
+              </p>
+            </div>
+          </div>
+          <div class="msg" style="margin: 0">
+            <div class="avatar u">V</div>
+            <div style="flex: 1">
+              <b>você</b><small>agora</small>
+              <p><span class="slash">/playing</span></p>
+              <div class="embed">
+                <strong>Now Playing</strong>🎶 |
+                <b>lofi hip hop radio</b> (<code>38%</code>)
+                <div class="bar"><i></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="recursos">
+        <div class="wrap">
+          <h2>Tudo o que uma sessão de música precisa</h2>
+          <dl class="features">
+            <div>
+              <dt>Busca por nome ou link</dt>
+              <dd>
+                Digite o que quer ouvir ou cole um link. Playlists inteiras
+                entram na fila de uma vez.
+              </dd>
+            </div>
+            <div>
+              <dt>Fila que você controla</dt>
+              <dd>
+                Veja a fila, embaralhe, mova, troque ou remova faixas pelo
+                número. <code>/playtop</code> fura a fila quando a música não
+                pode esperar.
+              </dd>
+            </div>
+            <div>
+              <dt>Reprodução sob medida</dt>
+              <dd>
+                Pause, retome, pule, ajuste o volume de 0 a 200 e escolha o modo
+                de repetição: faixa, fila ou autoplay.
+              </dd>
+            </div>
+            <div>
+              <dt>Moderação no mesmo bot</dt>
+              <dd>
+                <code>/ban</code> e <code>/purge</code> só aparecem para quem
+                tem permissão no servidor, e o bot confere de novo antes de
+                agir.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="comandos">
+        <div class="wrap">
+          <h2>Comandos</h2>
+          <div class="cmds">
+            <div>
+              <h3>Tocar</h3>
+              <ul>
+                <li>
+                  <code>/play</code><span>Toca uma música ou playlist</span>
+                </li>
+                <li>
+                  <code>/playtop</code
+                  ><span>Toca antes da próxima da fila</span>
+                </li>
+                <li><code>/pause</code><span>Pausa a faixa atual</span></li>
+                <li><code>/resume</code><span>Retoma a reprodução</span></li>
+                <li><code>/skip</code><span>Pula a faixa atual</span></li>
+                <li><code>/stop</code><span>Para tudo e limpa a fila</span></li>
+                <li><code>/volume</code><span>Volume de 0 a 200</span></li>
+                <li>
+                  <code>/repeat</code><span>Off, faixa, fila ou autoplay</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Fila</h3>
+              <ul>
+                <li><code>/queue</code><span>Mostra a fila</span></li>
+                <li>
+                  <code>/playing</code
+                  ><span>Faixa atual com barra de progresso</span>
+                </li>
+                <li><code>/shuffle</code><span>Embaralha a fila</span></li>
+                <li>
+                  <code>/move</code
+                  ><span>Move uma faixa para outra posição</span>
+                </li>
+                <li>
+                  <code>/swap</code><span>Troca duas faixas de lugar</span>
+                </li>
+                <li>
+                  <code>/remove</code><span>Remove uma faixa pelo número</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3>Servidor</h3>
+              <ul>
+                <li>
+                  <code>/help</code><span>Lista os comandos disponíveis</span>
+                </li>
+                <li>
+                  <code>/getuser</code
+                  ><span>Nome, ID e avatar de um usuário</span>
+                </li>
+                <li>
+                  <code>/ban</code
+                  ><span>Bane um membro (exige Banir Membros)</span>
+                </li>
+                <li>
+                  <code>/purge</code
+                  ><span
+                    >Apaga de 2 a 100 mensagens (exige Gerenciar
+                    Mensagens)</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hospedar">
+        <div class="wrap">
+          <h2>Hospede o seu MiMusic</h2>
+          <ol class="steps">
+            <li>
+              Crie uma aplicação no
+              <a href="https://discord.com/developers/applications"
+                >Discord Developer Portal</a
+              >, adicione um bot e copie o token.
+              <pre>
+git clone https://github.com/clcmo/Mi_Music.git
+cd Mi_Music
+cp .env.example .env   # cole o token em DISCORD_TOKEN</pre
+              >
+            </li>
+            <li>
+              Suba o bot com Docker ou direto com Node 18+.
+              <pre>
+docker compose up -d --build
+# ou
+npm ci &amp;&amp; npm start</pre
+              >
+            </li>
+            <li>
+              Convide o bot para o servidor com os escopos <code>bot</code> e
+              <code>applications.commands</code> e as permissões Ver Canal,
+              Enviar Mensagens, Inserir Links, Conectar e Falar.
+            </li>
+            <li>
+              No servidor, o dono do bot envia <code>!deploy</code> uma vez para
+              registrar os comandos de barra.
+            </li>
+          </ol>
+          <p class="note">
+            O projeto é open source (licença MIT). Respeite os termos de uso das
+            plataformas de onde o áudio vem.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span
+          >MiMusic · feito por
+          <a href="https://github.com/clcmo">clcmo</a></span
+        >
+        <span
+          ><a href="https://github.com/clcmo/Mi_Music/issues"
+            >Reportar um problema</a
+          >
+          · <a href="SECURITY.md">Segurança</a></span
+        >
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,30 +1,27 @@
 {
   "name": "mimusic",
   "version": "1.0.0",
-  "description": "Music Bot for Discord",
+  "description": "MiMusic — music streaming bot for Discord",
   "main": "index.js",
   "devDependencies": {
-    "prettier": "2.8.8"
+    "prettier": "2.8.6"
   },
   "dependencies": {
-    "@discordjs/opus": "^0.9.0",
-<<<<<<< HEAD
-    "discord-player": "^7.0.0",
-    "discord.js": "^14.8.0",
-=======
-    "discord-player": "^6.1.1",
-    "discord.js": "^14.11.0",
->>>>>>> 45cc7eb1a84e4f3bf6ae1db2fd194ed760907cea
+    "@discord-player/extractor": "^7.2.0",
+    "bgutils-js": "^4.0.3",
+    "discord-player": "^7.2.0",
+    "discord-player-youtubei": "^3.1.0",
+    "discord.js": "^14.27.0",
     "dotenv": "^16.0.3",
-    "ffmpeg": "^0.0.4",
-    "ffmpeg-static": "^5.1.0",
-    "fluent-ffmpeg": "^2.1.2",
-    "opusscript": "^0.1.0",
-    "prism-media": "^1.3.5",
-    "ytdl-core": "^4.11.4"
+    "ffmpeg-static": "^5.3.0",
+    "googlevideo": "^4.1.1",
+    "mediaplex": "^1.0.0",
+    "simple-ytdl-core": "^1.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "node --test tests/*.test.js",
+    "format": "prettier --write ."
   },
   "keywords": [
     "music",
@@ -33,5 +30,8 @@
     "js"
   ],
   "author": "clcmo",
-  "license": "ISC"
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
 }
