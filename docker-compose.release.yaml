@@ -1,0 +1,7 @@
+# Usage: VERSION=1.2.0 docker compose -f docker-compose.release.yaml up -d
+services:
+  discord-bot:
+    image: ghcr.io/clcmo/mi_music:${VERSION:-latest}
+    container_name: discord-bot
+    env_file: .env
+    restart: always
