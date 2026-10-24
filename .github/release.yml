@@ -1,0 +1,16 @@
+# Categories for the auto-generated release notes (by PR label)
+changelog:
+  exclude:
+    labels: [skip-changelog]
+    authors: [dependabot, renovate]
+  categories:
+    - title: Breaking changes
+      labels: [breaking]
+    - title: New features
+      labels: [feature, enhancement]
+    - title: Fixes
+      labels: [bug, fix]
+    - title: Docs and landing page
+      labels: [documentation]
+    - title: Other changes
+      labels: ['*']

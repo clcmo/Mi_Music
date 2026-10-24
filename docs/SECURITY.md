@@ -1,20 +1,11 @@
 # Security Policy
 
-## Supported Versions
+## Supported versions
 
-The project is supported through the following browsers:
+Only the latest commit on `main` is supported.
 
-| Browser | Supported          |
-| ------- | ------------------ |
-| Firefox | :white_check_mark: |
-| Chrome  | :white_check_mark: |
-| Safari  | :white_check_mark: |
-| Edge    | :white_check_mark: |
+## Reporting a vulnerability
 
-## Reporting a Vulnerability
+Open an [issue](https://github.com/clcmo/Mi_Music/issues/new?template=bug_report.md) describing the problem. If it involves a leaked bot token or lets someone bypass a permission check (`/ban`, `/purge`), please do not post details publicly: contact the maintainer through the GitHub profile [@clcmo](https://github.com/clcmo) instead.
 
-Use this section to tell people how to report a vulnerability.
-
-Report the [Issue Request](https://github.com/clcmo/web/issues/new?assignees=&labels=&template=bug_report.md&title=), with details on the vulnerabilities found on the page.
-
-A screenshot and a code snippet with the reported message are also valid.
+If your bot token is ever exposed, reset it immediately in the Discord Developer Portal.
