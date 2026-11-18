@@ -37,6 +37,6 @@
   "overrides": {
     "file-type": "^21.3.4",
     "esbuild": "^0.28.1",
-    "googlevideo": "^4.0.0"
+    "googlevideo": "^5.0.1"
   }
 }
